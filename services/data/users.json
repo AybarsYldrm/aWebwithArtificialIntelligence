@@ -2,25 +2,7 @@
   {
     "username": "abuzer",
     "password": "123456",
-    "secret": "fc8f32f03fef5b7a1b117180ecae0a5f736ca3d51a0c0a67ffc34ef617a1a6f6",
+    "secret": "...",
     "role": "admin"
-  },
-  {
-    "username": "aybars",
-    "password": "123456",
-    "secret": "61d8ba8d00c845e8be7c10829583d73ce05deef8cef677ec3c4c43029757ca2f",
-    "role": "admin"
-  },
-  {
-    "username": "tayyar",
-    "password": "123456",
-    "secret": "8469f9bd810cb8e44de35c4e98410ea0733e114d309de80cee7e60bce415c8d3",
-    "role": "user"
-  },
-  {
-    "username": "aladdin",
-    "password": "123456",
-    "secret": "6f1342220443d6bf7d297a5a983e3769c1187a8c8a1241d31e173caedda3da5c",
-    "role": "user"
   }
 ]
