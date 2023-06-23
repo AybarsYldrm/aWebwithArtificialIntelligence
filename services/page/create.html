@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>create account</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>user register</h1>
+    <form id="myForm">
+        <label for="username">username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <input type="submit" value="save">
+    </form>
+    <div id="result"></div>
+    <br>
+    <a href="/referanse">return</a>
+    <a href="/login">if you have an account</a>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            var formData = new FormData(event.target);
+            var username = formData.get('username');
+            var password = formData.get('password');
+
+            var data = {
+                username: username,
+                password: password
+            };
+
+            try {
+                var response = await fetch('/create', {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    var responseData = await response.json();
+                    document.getElementById("result").innerHTML = `success: ${responseData.success}, message: ${responseData.message}`;
+                } else {
+                    throw new Error('error: ' + response.statusText);
+                }
+            } catch (error) {
+                document.getElementById("result").innerHTML = `error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>
