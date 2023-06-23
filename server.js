@@ -48,18 +48,18 @@ apiService.addRoute('POST', '/questioning', (req, res, params, payload) => {
       const url = 'https://discord.com';
       const headers = {
         ':method': 'POST',
-        ':path': '/api/webhooks/1121791675275149346/ePDA4D8nIFKYjXxTWA_a8i-zR7qvo3bApebYkaHDsvCtaOnCfqe6OSOKD7WTtEybTNtw', // Gönderilecek URL'nin yolu
+        ':path': '/api/webhooks/webhook_id/webhook_token', // Gönderilecek URL'nin yolu
         'Content-Type': 'application/json',
       }
       const content = JSON.stringify({
         "username": "Logger",
-        "avatar_url": "https://lh3.googleusercontent.com/ogw/AOLn63HPbh-fmeqLdncUWt4Nj_7OEsz1FUeG9q1OpNxC=s32-c-mo",
+        "avatar_url": "",
         "embeds": [
           {
             "author": {
               "name": "Aybars Yildirim",
               "url": "https://192.168.1.16",
-              "icon_url": "https://lh3.googleusercontent.com/ogw/AOLn63Hdo4jV9KGZ3VpqA_YjoYP1b5aCN6-r-I4dByI0FA=s32-c-mo"
+              "icon_url": ""
             },
             "title": "API Referanse",
             "url": "https://192.168.1.16/referanse",
